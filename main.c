@@ -15,10 +15,12 @@ int main(int argc, char *argv[]){
     }
 
     if (argc >= 2){
-        toDecimal(argv[1], strlen(argv[1]));
-        toHex(argv[1], strlen(argv[1]));
-        toBinary(argv[1], strlen(argv[1]));
-        toASCII(argv[1], strlen(argv[1]));
+        for (int i = 1; i < argc; i++){
+            toDecimal(argv[i], strlen(argv[i]));
+            toHex(argv[i], strlen(argv[i]));
+            toBinary(argv[i], strlen(argv[i]));
+            toASCII(argv[i], strlen(argv[i]));
+        }
     }
     
     return 0;
